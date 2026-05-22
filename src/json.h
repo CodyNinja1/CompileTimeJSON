@@ -23,7 +23,7 @@ namespace CompileTimeJSON
         }
         else if constexpr (std::is_same_v<std::string_view, ValueT>)
         {
-            return std::string(Value);
+            return '"' + std::string(Value) + '"';
         }
         else
         {
