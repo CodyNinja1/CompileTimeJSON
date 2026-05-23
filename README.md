@@ -24,7 +24,7 @@ int main()
 {
     User Bob = User("Bobby Person", 4, {"Male", "bobbyson@example.com", 0});
 
-    std::cout << CompileTimeJSON::StructToJSON(Bob) << "\n";
+    std::cout << CompileTimeJSON::ToJSON(Bob) << "\n";
 }
 ```
 
