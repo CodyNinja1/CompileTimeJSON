@@ -1,7 +1,6 @@
+#define __glibcxx_reflection 202603L
 #include <meta>
 #include <string>
-
-// TODO: Make sure which one of these puts std::begin/end/size and nothing extra
 #include <array>
 #include <vector>
 #include <iterator>
@@ -125,7 +124,7 @@ namespace CompileTimeJSON
                 + '"' 
                 + std::string(std::meta::identifier_of(Member)) 
                 + "\": " 
-                + StructToJSON<decltype(Value.[:Member:])>(Value.[:Member:], Indent + 4) 
+                + ToJSON<decltype(Value.[:Member:])>(Value.[:Member:], Indent + 4) 
                 + (MemberIdx == std::size(Members) - 1 ? "\n" : ",\n");
 
                 MemberIdx++;
