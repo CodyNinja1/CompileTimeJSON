@@ -1,8 +1,9 @@
-#define __glibcxx_reflection 202603L
 #include <meta>
 #include <string>
 #include <array>
 #include <vector>
+
+// TODO: figure out which one has std::begin/end/size
 #include <iterator>
 #include <ranges>
 
